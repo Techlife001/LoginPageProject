@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn Logo" />
+            <h1>LinkedIn</h1>
+        </div>
+    </header>
+    <main class="main-container">
+        <div class="login-form">
+            <h2>Sign in</h2>
+            <p>Stay updated on your professional world</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email or Phone</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <button type="button" class="login-btn" onclick="validateLogin()">Sign in</button>
+            </form>
+            <p class="forgot-password"><a href="#">Forgot password?</a></p>
+        </div>
+        <div class="register">
+            <p>New to LinkedIn? <a href="#">Join now</a></p>
+        </div>
+    </main>
+    <script>
+        const mockEmail = "test@example.com";
+        const mockPassword = "12345";
+
+        function validateLogin() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            if (email === mockEmail && password === mockPassword) {
+                alert("Login successful!");
+                window.location.href = "welcome.html";
+            } else {
+                alert("Invalid email or password. Try again.");
+            }
+        }
+    </script>
+</body>
+</html>
+
